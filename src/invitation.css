@@ -1,0 +1,196 @@
+@font-face {
+  font-family: invited;
+  src: url(../public/fonts/invited.ttf);
+}
+@font-face {
+  font-family: us;
+  src: url(../public/fonts/us.ttf);
+}
+@font-face {
+  font-family: dream;
+  src: url(../public/fonts/dream.ttf);
+}
+@font-face {
+  font-family: location;
+  src: url(../public/fonts/location.ttf);
+}
+@font-face {
+  font-family: after;
+  src: url(../public/fonts/after.ttf);
+}
+.outerBox {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: rgb(30, 28, 28);
+  height: 780px;
+}
+.innerBox {
+  display: flex;
+  flex-direction: column;
+  width: 400px;
+  height: 650px;
+  margin-top: 20px;
+  border: 1px solid rgb(50, 50, 50);
+  padding-left: 10px;
+  padding-right: 10px;
+  background-image: url(../public/back.jpg);
+  background-repeat: round;
+  margin-bottom: 20px;
+  border-radius: 10px;
+}
+.when {
+  font-family: location;
+  font-size: 20px;
+}
+.invited {
+  display: flex;
+  justify-content: center;
+  margin: auto;
+  padding-top: 10px;
+  font-size: 50px;
+  font-family: invited;
+}
+.join {
+  margin: auto;
+  padding-right: 100px;
+  padding-bottom: 10px;
+  font-family: us;
+}
+.us {
+  display: flex;
+  margin: auto;
+  font-size: 45px;
+
+  font-family: us;
+}
+.usOuter {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.weddingDay {
+  display: flex;
+  justify-content: center;
+  margin: auto;
+  font-family: after;
+}
+.outerDate {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 40px;
+  padding-top: 10px;
+}
+.outerTime {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 40px;
+}
+.location {
+  margin: auto;
+  display: flex;
+  justify-content: center;
+  font-size: 30px;
+  font-family: location;
+}
+.outerWhere {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+}
+.where {
+  margin: auto;
+  font-family: dream;
+}
+.outerDress {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.note {
+  padding-right: 200px;
+  margin: auto;
+  font-family: location;
+  font-size: 20px;
+  height: 20px;
+  padding-bottom: 5px;
+}
+.event {
+  margin: auto;
+  display: flex;
+  justify-content: center;
+
+  font-family: after;
+}
+.modal {
+  background-color: rgb(30, 28, 28);
+  display: none; /* Hidden by default */
+  position: fixed; /* Stay in place */
+  z-index: 5; /* Sit on top */
+  padding-top: 100px; /* Location of the box */
+  left: 0;
+  top: 0;
+  width: 100%; /* Full width */
+  height: 100%; /* Full height */
+  overflow: auto; /* Enable scroll if needed */
+}
+
+/* Modal Content */
+.modal-content {
+  width: 400px;
+  background-color: #fefefe;
+  margin: auto;
+  padding: 20px;
+  border: 1px solid #888;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+/* The Close Button */
+.close {
+  color: #aaaaaa;
+  float: right;
+  font-size: 28px;
+  font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+  color: #000;
+  text-decoration: none;
+  cursor: pointer;
+}
+.rsvpButton {
+  font-family: us;
+  font-weight: bold;
+  width: 200px;
+  margin-top: 5px;
+  margin-bottom: 10px;
+  margin-left: 95px;
+  background: none;
+  border: 2px solid rgb(99, 95, 95);
+  border-radius: 4px;
+}
+.dress {
+  font-family: location;
+  font-size: 20px;
+}
+.date {
+  font-family: after;
+  padding-left: 8px;
+}
+.time {
+  font-family: after;
+  padding-left: 8px;
+}
+.style {
+  font-family: after;
+  padding-left: 8px;
+}
+.outerDress {
+  height: 40px;
+}
