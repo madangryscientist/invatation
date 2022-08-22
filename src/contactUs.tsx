@@ -63,7 +63,7 @@ export const ContactUs = () => {
           <input
             className="contactInput"
             name="children"
-            type="text"
+            type="number"
             onChange={formik.handleChange}
             value={formik.values.children}
           ></input>
@@ -75,7 +75,7 @@ export const ContactUs = () => {
           <input
             className="contactInput"
             name="amount"
-            type="text"
+            type="number"
             onChange={formik.handleChange}
             value={formik.values.amount}
           ></input>
