@@ -6,7 +6,7 @@ export const ContactUs = () => {
 
   const formik = useFormik<ContactDbModel>({
     initialValues: {
-      id: 0,
+      
       name: "",
       others: "",
       children: 0,
@@ -14,7 +14,7 @@ export const ContactUs = () => {
     },
     onSubmit: async (values, { resetForm }) => {
       const result = await fetch(
-        "https://localhost:7259/ContactUs/ContactUsInput",
+        "https://backend333.azurewebsites.net/WeddingContactUs/WeddingContactUsInput",
         {
           headers: {
             "Content-Type": "application/json",
