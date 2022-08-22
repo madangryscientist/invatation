@@ -84,6 +84,7 @@ export const ContactUs = () => {
               Submit
             </button>
           </div>
+          {submitted?"Saved":""}
         </div>
       </div>
     </form>
