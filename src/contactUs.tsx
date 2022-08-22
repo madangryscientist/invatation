@@ -10,7 +10,7 @@ export const ContactUs = () => {
       name: "",
       others: "",
       children: 0,
-      amount: 0,
+      amount: 1,
     },
     onSubmit: async (values, { resetForm }) => {
       const result = await fetch(
