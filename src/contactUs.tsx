@@ -3,10 +3,10 @@ import { ContactDbModel } from "./model/contactModel";
 import { useFormik } from "formik";
 export const ContactUs = () => {
   const [submitted, setSubmitted] = useState(false);
-
+  const [hasCounted, setHasCounted] = useState(false);
+  const [counted, setCounted] = useState(0);
   const formik = useFormik<ContactDbModel>({
     initialValues: {
-      
       name: "",
       others: "",
       children: 0,
@@ -25,10 +25,36 @@ export const ContactUs = () => {
       );
       await result.json();
       resetForm();
-
       setSubmitted(true);
     },
   });
+  const onChange = (e: React.FormEvent<HTMLInputElement>) => {
+    const newValue = e.currentTarget.value;
+    if (newValue !== "") {
+      if (!hasCounted) {
+        setHasCounted(true);
+        formik.setFieldValue("amount", formik.values.amount + 1);
+      }
+    } else {
+      if (hasCounted) {
+        setHasCounted(false);
+        formik.setFieldValue("amount", formik.values.amount - 1);
+      }
+    }
+    formik.setFieldValue("others", newValue);
+    console.log("change");
+  };
+  const childrenOnChange = (e: React.FormEvent<HTMLInputElement>) => {
+    const newestValue = Number.parseInt(e.currentTarget.value);
+    if (newestValue !== counted) {
+      setCounted(newestValue);
+      formik.setFieldValue(
+        "amount",
+        formik.values.amount - counted + newestValue
+      );
+    }
+    console.log(newestValue);
+  };
   return (
     <form onSubmit={formik.handleSubmit}>
       <div className="contactUsBox">
@@ -53,6 +79,7 @@ export const ContactUs = () => {
             name="others"
             type="text"
             onChange={formik.handleChange}
+            onBlur={onChange}
             value={formik.values.others}
           ></input>
         </div>
@@ -65,6 +92,7 @@ export const ContactUs = () => {
             name="children"
             type="number"
             onChange={formik.handleChange}
+            onBlur={childrenOnChange}
             value={formik.values.children}
           ></input>
         </div>
@@ -83,8 +111,8 @@ export const ContactUs = () => {
             <button className="onSubmit" type="submit">
               Submit
             </button>
+            {submitted ? `Saved` : ``}
           </div>
-          {submitted?"Saved":""}
         </div>
       </div>
     </form>
