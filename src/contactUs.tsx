@@ -109,11 +109,13 @@ export const ContactUs = () => {
             value={formik.values.amount}
           ></input>
           <div className="submitButton">
-            <button className="onSubmit" type="submit">
+            <button className="onSubmit" type="submit" disabled={formik.isSubmitting || submitted}>
               Submit
             </button>
-            {submitted ? `Saved` : ``}
+            
           </div>
+          {submitted ? `Saved` : ``}
+          {formik.isSubmitting ? `Saving` : ``}
         </div>
       </div>
     </form>
