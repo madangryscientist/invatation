@@ -23,9 +23,10 @@ export const ContactUs = () => {
           body: JSON.stringify(values),
         }
       );
+      setSubmitted(true);
       await result.json();
       resetForm();
-      setSubmitted(true);
+      
     },
   });
   const onChange = (e: React.FormEvent<HTMLInputElement>) => {

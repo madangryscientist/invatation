@@ -28,7 +28,8 @@
 .flip-card-front {
   display: flex;
   flex-direction: column;
-  width: 400px;
+  max-width: 400px;
+  min-width: 360px;
   height: 650px;
   margin-top: 20px;
   border: 1px solid rgb(50, 50, 50);
@@ -183,7 +184,8 @@
 }
 .flip-card {
   background-color: transparent;
-  width: 400px;
+  max-width: 400px;
+  min-width: 360px;
   height: 650px;
   perspective: 1000px;
 }
@@ -217,12 +219,19 @@
   transform: rotateY(180deg);
   display: flex;
   flex-direction: column;
-  width: 400px;
+  max-width: 400px;
+  min-width: 360px;
   height: 650px;
   border: 1px solid rgb(50, 50, 50);
   background-image: url(../public/back.jpg);
   background-repeat: round;
   border-radius: 10px;
+}
+@media screen and (max-width: 400px) {
+  .flip-card-back, .flip-card-front{
+    padding-left: 10px;
+    padding-right: 10px;
+  }
 }
 .backButton {
   background: none;
