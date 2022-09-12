@@ -14,7 +14,7 @@ export const ContactUs = () => {
     },
     onSubmit: async (values, { resetForm }) => {
       const result = await fetch(
-        "https://backend333.azurewebsites.net/WeddingContactUs/WeddingContactUsInput",
+        "https://warm-taiga-85884.herokuapp.com/WeddingContactUs/WeddingContactUsInput",
         {
           headers: {
             "Content-Type": "application/json",
